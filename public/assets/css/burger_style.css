@@ -1,8 +1,15 @@
-
 body {
-    background-color: goldenrod;
+    background-image: url("/assets/img/hamburgers.jpg");
 }
-
+p {
+    font-size: 2rem;
+}
+.col-4 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
 li {
     font-size: 22px;
 }
