@@ -1,17 +1,14 @@
-<li>	
-<section class="col-6 float-left">
- {{ burger_name}}
- </section>
-<section class="col-6 float-right">
-          <button data-id={{id}} class="eatBurgerBtn btn-primary">Eat it!</button>
-        </section>
-</li>
-
-<li>	
-<section class="col-6 float-left">
- {{ burger_name}}
- </section>
-<section class="col-6 float-right">
-          <button data-id={{id}} class="delBurgerBtn btn-primary">Delete it!</button>
-        </section>
+<li>
+	<section class="col-9 float-left">
+		{{ burger_name}}
+	</section>
+	{{#if devoured}}
+	<section class="col-3 float-right">
+		<button data-id={{id}} class="delBurgerBtn btn-danger btn-sm">Delete It!</button>
+	</section>
+	{{else}}
+	<section class="col-3 float-right">
+		<button data-id={{id}} class="eatBurgerBtn btn-danger btn-sm"> Eat it!</button>
+	</section>
+	{{/if}}
 </li>

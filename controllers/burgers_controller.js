@@ -31,6 +31,7 @@ router.post("/api/burgers", function(req, res) {
 
 //UPDATE A BURGER (DEVOUR A BURGER)
 router.put("/api/burgers", function(req, res) {
+    console.log("hit moves burger")
     var condition = "id = " + req.params.id;
 
     console.log("condition", condition);

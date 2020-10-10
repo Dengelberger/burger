@@ -15,8 +15,8 @@ var burger = {
     },
 
     // This is to change a burger to devoured.
-    update: function(objColVals, condition, cb) {
-      orm.update("burgers", objColVals, condition, function(res) {
+    update: function(value, cb) {
+      orm.update("burgers", "id", "devoured", value, function(res) {
         cb(res);
       });
     }

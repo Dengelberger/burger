@@ -28,8 +28,8 @@ var connection = require("../config/connection.js");
       });
     },
     //UPDATE A BURGER
-    update: function(whichTable, whichCol, value, cb) {
-      connection.query(queryString, function(err, result) {
+    update: function(whichTable, id, value, cb) {
+      connection.query("UPDATE ?? SET = ? WHERE ?? = ??", [whichTable, value, 1, id], function(err, result) {
         if (err) {
           throw err;
         }
@@ -45,7 +45,7 @@ var connection = require("../config/connection.js");
 
     //     console.log(result);
   
-  
+
     //     cb(result);
     //   });  
     // }

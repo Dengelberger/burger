@@ -1,41 +1,43 @@
 <div class="jumbotron jumbotron-fluid">
+  <img src="../assets/img/hamburgers.jpg" class="img-fluid" alt="hamburger image">
   <div class="container">
     <h1 class="display-4 text-center">Eat da Burgers!</h1>
-    <p class="lead text-center">Add your favorite burger here:</p>
-    <form class="create-form">
-      <div class="form-group">
-        <input type="text" id="bg" name="name">
-      </div>
-      <button type="submit">Add Burger</button>
-    </form>
   </div>
+</div>
+<div class="form-container">
+  <p class="lead text-center">Add your favorite burger here:</p>
+  <form class="create-form">
+    <div class="form-group align-center">
+      <input type="text" id="bg" name="name">
+    </div>
+    <button type="submit">Add Burger</button>
+  </form>
 </div>
 
 <div class="row">
   <div class="col-6">
     <h3>Burgers Ready to Eat!</h3>
-    <ul>
-      <section class="row mb-1 pb-1">
-       
-          {{#each burgers}}
-          {{#unless devoured}}
-          {{> burgers/burger-block devoured=false}}
-          {{/unless}}
-          {{/each}}
-        </section>
-        
+    <ol>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devoured=false}}
+        {{/unless}}
+        {{/each}}
       </section>
-    </ul>
+
+      </section>
+    </ol>
   </div>
 
-  <div class="col-6"></div>
-    <h3>Burgers Already Gone!</h3>
-  <ul>
+  <div class="col-6">
+  <h3>Burgers Already Gone!</h3>
+  <ol>
     {{#each burgers}}
     {{#if devoured}}
     {{> burgers/burger-block devoured=true}}
     {{/if}}
     {{/each}}
-  </ul>
+  </ol>
+  </div>
 </div>
 </div>
