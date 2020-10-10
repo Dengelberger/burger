@@ -17,6 +17,7 @@ $(function() {
   
     // UPDATE
     $(".eatBurgerBtn").on("click", function(event) {
+      event.preventDefault();
       var id = $(this).data("id");
       console.log(id);
 
