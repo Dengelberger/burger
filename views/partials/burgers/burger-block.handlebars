@@ -2,13 +2,14 @@
 	<section class="col-9 float-left">
 		{{ burger_name}}
 	</section>
+	{{#unless devoured}}
+	<section class="col-3 float-right">
+		<button type="button" data-id={{id}} class="eatBurgerBtn btn-danger btn-sm" data-devoured="{{devoured}}"> Eat it!</button>
+	</section>
+	{{/unless}}
 	{{#if devoured}}
 	<section class="col-3 float-right">
 		<button data-id={{id}} class="delBurgerBtn btn-danger btn-sm">Delete It!</button>
-	</section>
-	{{else}}
-	<section class="col-3 float-right">
-		<button data-id={{id}} class="eatBurgerBtn btn-danger btn-sm"> Eat it!</button>
 	</section>
 	{{/if}}
 </li>

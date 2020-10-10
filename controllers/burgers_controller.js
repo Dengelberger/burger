@@ -31,15 +31,16 @@ router.post("/api/burgers", function(req, res) {
 
 //UPDATE A BURGER (DEVOUR A BURGER)
 router.put("/api/burgers", function(req, res) {
-    console.log("hit moves burger")
+
     var condition = "id = " + req.params.id;
 
-    console.log("condition", condition);
-burger.update({
-    devoured: req.body.devoured
-}, condition, function(result) {
+    console.log("condtion", condition);
+
+burger.update({devoured: true }, condition, function(result) {
     if(result.changedRows == 0) {
-        res.status(404).end();
+        return res.status(404).end();
+    } else {
+       res.status(200).end();
     }
 });
 });

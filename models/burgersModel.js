@@ -7,16 +7,16 @@ var burger = {
         cb(res);
       });
     },
-    // The variables cols and vals are arrays.
+    // ADD A BURGER
     create: function(value, cb) {
       orm.create("burgers", "burger_name", value, function(res) {
         cb(res);
       });
     },
 
-    // This is to change a burger to devoured.
-    update: function(value, cb) {
-      orm.update("burgers", "id", "devoured", value, function(res) {
+    // EAT A BURGER
+    update: function(objColVals, condition,  cb) {
+      orm.update("burgers", condition, objColVals, function(res) {
         cb(res);
       });
     }
