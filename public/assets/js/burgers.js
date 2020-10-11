@@ -2,13 +2,13 @@
 $(function() {
     // DELETE
     $(".delBurgerBtn").on("click", function(event) {
-      event.preventDefault();
+      // event.preventDefault();
       const id = $(this).data("id");
   
       console.log(id);
   
       $.ajax("/api/burgers/" + id, {
-        method: "DELETE"
+        type: "DELETE"
       }).then(function() {
         console.log("Burger " + id + "was deleted succesfully!");
   
@@ -45,7 +45,7 @@ $(function() {
     // POST
     $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
-      event.preventDefault();
+      // event.preventDefault();
       console.log("just submitted new burger")
   
       var newBurger = {
