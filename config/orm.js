@@ -17,7 +17,7 @@ var connection = require("../config/connection.js");
       });
     },
 
-    //CREATE A BURGER
+    //ADD A BURGER
     create: function(whichTable, whichCol, value, cb) {
        connection.query("INSERT INTO ?? (??) VALUES (?)", [whichTable, whichCol, value],  function(err, result) {
         if (err) {
