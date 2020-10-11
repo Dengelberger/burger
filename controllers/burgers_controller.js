@@ -46,7 +46,20 @@ burger.update(burgerID, function(result) {
 });
 
 //DELETE A BURGER
+router.delete("/api/burgers/:id", function(req, res) {
 
+    var burgerID = req.params.id;
+
+    console.log("burgerID", burgerID);
+
+burger.remove(burgerID, function(result) {
+    if(result.changedRows == 0) {
+        return res.status(404).end();
+    } else {
+       res.status(200).end();
+    }
+});
+});
 
 
 // Export routes for server.js to use.

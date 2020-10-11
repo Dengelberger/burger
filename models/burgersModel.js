@@ -20,6 +20,14 @@ var burger = {
         // console.log(res);
         cb(res);
       });
+    },
+
+    // DELETE A BURGER
+    remove: function(burgerID, cb) {
+      orm.remove("burgers", "id", burgerID, function(res) {
+        console.log(res);
+        cb(res);
+      });
     }
   };
 

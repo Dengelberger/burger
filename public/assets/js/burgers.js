@@ -1,17 +1,18 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
     // DELETE
-    $(".remove-burger").on("click", function() {
-      const burgerId = $(this).attr("data-id");
+    $(".delBurgerBtn").on("click", function(event) {
+      event.preventDefault();
+      const id = $(this).data("id");
   
-      console.log(burgerId);
+      console.log(id);
   
-      $.ajax("/api/burgers/" + burgerId, {
+      $.ajax("/api/burgers/" + id, {
         method: "DELETE"
       }).then(function() {
-        console.log("Burger was deleted succesfully!");
+        console.log("Burger " + id + "was deleted succesfully!");
   
-        window.location = "/";
+        location.reload();
       });
     });
   
@@ -40,7 +41,7 @@ $(function() {
         }
       );
     });
-  
+
     // POST
     $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.

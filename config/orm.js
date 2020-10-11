@@ -11,7 +11,7 @@ var connection = require("../config/connection.js");
           throw err;
         }
 
-        console.log(data);
+      console.log(data);
 
         cb(data);
       });
@@ -33,22 +33,20 @@ var connection = require("../config/connection.js");
         if (err) {
           throw err;
         }
-  console.log(result);
+  // console.log(result);
         cb(result);
       });
     },  
     //  //DELETE A BURGER (THIS IS EXTRA)
-    //  remove: function(table, col, val, cb) {
-    //   connection.query("DELETE FROM ?? WHERE ?? = ?", [table, col, val], function(err, result) {
-    //     if (err) 
-    //       throw err;
-
-    //     console.log(result);
-  
-
-    //     cb(result);
-    //   });  
-    // }
+    remove: function(whichTable, whichID, burgerID, cb) {
+        connection.query("DELETE FROM ?? WHERE ?? = ?", [whichTable, whichID, burgerID], function(err, result) {
+          if (err) {
+            throw err;
+          }
+    console.log(result);
+          cb(result);
+        });
+      },  
   };
 
 
