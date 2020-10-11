@@ -11,7 +11,7 @@ var connection = require("../config/connection.js");
           throw err;
         }
 
-        // console.log(data);
+        console.log(data);
 
         cb(data);
       });
@@ -29,11 +29,11 @@ var connection = require("../config/connection.js");
     },
     //UPDATE A BURGER
     update: function(whichTable, whichID, burgerID, whichCol, cb) {
-      connection.query("UPDATE ?? SET ?? = ? WHERE ?? = ?", [whichTable, whichCol, 1, whichID, burgerID], function(err, result) {
+      connection.query("UPDATE ?? SET ?? = ? WHERE ?? = ?", [whichTable, whichCol, true, whichID, burgerID], function(err, result) {
         if (err) {
           throw err;
         }
-  
+  console.log(result);
         cb(result);
       });
     },  
