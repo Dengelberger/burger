@@ -1,14 +1,10 @@
-# burger
+# Eat da Burger App
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description 
   
-  This project is supposed to be a display of using the ORM, controller, and model files to move information to and from the front end.  It is supposed to allow user input of a food item, and have that food be on either a consumed or not consumed list, with buttons that would allow the user to move the food item to the other list.
-
-I struggled quite a bit with this project and did not finish to my satisfaction.  While my get function worked, and at one point my create function worked, I could not get my update function or delete functions to work. I could not get my input area centered on the page, and could not get the image to be in the background.
-
-I WILL figure it all out over the weekend, but I am very frustrated with my own lack of ability to finish this app in time for the due date.  I hope consideration will be given if I get it running and update my files later. Thank you.
+  This app is a demo of using MySql, Node.js Express and Express Handlebars, and Heroku. 
 
   ## Table of Contents
 
@@ -22,11 +18,11 @@ I WILL figure it all out over the weekend, but I am very frustrated with my own 
 
   ## Installation 
   
-  Be sure to npm install express, express-handlebars, and mysql before running.
+  The user needs to use the Heroku link to deploy the app on a web page.  Just a note...the Delete keys have an issue of not taking effect until the page is refreshed at the top or by clicking on one of the other types of buttons.  This issue is in the process of being resolved.
 
   ## Usage 
   
-  When completed, users can enter a new burger, click a button to indicate they have consumed a burger, and delete a burger from the consumed list.
+  The user can deploy the page from the Heroku app or through the Heroku link when given.  The user can type in any burger name they wish and click the "Add burger" button, and that burger will be added to the left side of the page.  The user can click on any "Eat It" button and that burger will be moved to the right side of the page.  The user can click on any "Delete It" button and that burger will disappear (on refresh or reload of the page, for now).
 
   ## License 
 
@@ -36,14 +32,13 @@ I WILL figure it all out over the weekend, but I am very frustrated with my own 
 
   ## Contributing 
   
-  Thanks to classmates and instructors for helping me along the way.
+  Thank you to all who have helped develop and de-bug this app, including my instructors at UPenn Bootcamp as well as my classmates. As frustrating as the process was at times, I learned a great deal about trouble shooting and resolving issues.
 
   ## Tests 
   
-  No testing at this time.
+  No testing available at this time, other than to go try it out.
 
   ## Questions 
 
   Questions or comments about this README.md file? Contact me at dengelberger@gmail.com or visit my GitHub at https://github.com/DEngelberger.
-
 
